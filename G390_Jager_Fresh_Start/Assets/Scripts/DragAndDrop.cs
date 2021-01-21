@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainScript : MonoBehaviour
+public class DragAndDrop : MonoBehaviour
 {
     //private Variables
     bool canMove;
@@ -38,5 +38,14 @@ public class MainScript : MonoBehaviour
             }
         }
 
+        if (dragging)
+        {
+            this.transform.position = mousePos;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            canMove = false;
+            dragging = false;
+        }
     }
 }
