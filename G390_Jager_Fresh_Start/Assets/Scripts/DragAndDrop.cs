@@ -1,0 +1,42 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MainScript : MonoBehaviour
+{
+    //private Variables
+    bool canMove;
+    bool dragging;
+    Collider2D collider;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        collider = GetComponent<Collider2D>();
+        canMove = false;
+        dragging = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (collider == Physics2D.OverlapPoint(mousePos))
+            {
+                canMove = true;
+            }
+            else
+            {
+                canMove = false;
+            }
+            if (canMove)
+            {
+                dragging = true;
+            }
+        }
+
+    }
+}
