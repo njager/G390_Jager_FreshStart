@@ -9,6 +9,10 @@ public class Trash : MonoBehaviour
     //public variables
     public int itemsLeft;
     public TextMeshProUGUI countText;
+    public TextMeshProUGUI timerText;
+
+    //private variables
+    private float timer =20;
 
     //start is called at the beginning of the game
     private void Start()
@@ -23,6 +27,9 @@ public class Trash : MonoBehaviour
         {
             print("Done!");
         }
+
+        timer -= Time.deltaTime;
+        timerText.text = "Time left = " + timer.ToString();
     }
 
     void SetCountText()

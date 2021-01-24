@@ -515,11 +515,11 @@ RectTransform:
   m_Father: {fileID: 269741162}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -10, y: -10}
+  m_SizeDelta: {x: 250, y: 50}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &717576171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1670,6 +1670,10 @@ PrefabInstance:
       propertyPath: countText
       value: 
       objectReference: {fileID: 1461721631}
+    - target: {fileID: 3889489385122742115, guid: 439e0da7e090fe2458bcee917e37d39d, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 717576171}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 439e0da7e090fe2458bcee917e37d39d, type: 3}
 --- !u!1001 &4715744481381744354
