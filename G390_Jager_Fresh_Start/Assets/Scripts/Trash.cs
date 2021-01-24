@@ -27,7 +27,7 @@ public class Trash : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Items left to donate = " + countText.ToString();
+        countText.text = "Items left to donate = " + itemsLeft.ToString();
     }
 
     //detects collision with item
@@ -38,6 +38,7 @@ public class Trash : MonoBehaviour
             print("CollidedTrig");
             itemsLeft -= 1;
             other.gameObject.SetActive(false);
+            SetCountText();
         }
     }
 }
