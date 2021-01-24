@@ -23,6 +23,7 @@ public class Trash : MonoBehaviour
         {
             print("CollidedTrig");
             itemsLeft -= 1;
+            other.gameObject.SetActive(false);
         }
     }
 }
