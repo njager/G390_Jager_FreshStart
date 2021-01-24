@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour
 {
+    //public variables
+    public int itemsLeft;
+
     // Update is called once per frame
     void Update()
     {
-         
+         if(itemsLeft <= 0)
+        {
+            print("Done!");
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //detects collision with item
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        print("Collided");
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        print("Collided");
+        if (other.gameObject.CompareTag("Item"))
+        {
+            print("CollidedTrig");
+        }
     }
 }
