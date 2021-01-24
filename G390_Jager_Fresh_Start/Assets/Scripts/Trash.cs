@@ -8,10 +8,13 @@ public class Trash : MonoBehaviour
 {
     //public variables
     public int itemsLeft;
-    
+    public TextMeshProUGUI countText;
 
-    //private variables
-    private int count;
+    //start is called at the beginning of the game
+    private void Start()
+    {
+        SetCountText();
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,6 +23,11 @@ public class Trash : MonoBehaviour
         {
             print("Done!");
         }
+    }
+
+    void SetCountText()
+    {
+        countText.text = "Items left to donate = " + countText.ToString();
     }
 
     //detects collision with item
