@@ -22,6 +22,7 @@ public class Trash : MonoBehaviour
         if (other.gameObject.CompareTag("Item"))
         {
             print("CollidedTrig");
+            itemsLeft -= 1;
         }
     }
 }
