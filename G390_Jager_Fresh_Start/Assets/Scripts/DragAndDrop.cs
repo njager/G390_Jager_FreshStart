@@ -48,4 +48,13 @@ public class DragAndDrop : MonoBehaviour
             dragging = false;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("Collided");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("Collided");
+    }
 }
