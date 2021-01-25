@@ -25,7 +25,7 @@ public class Trash : MonoBehaviour
     {
          if(itemsLeft <= 0)
         {
-            print("Done!");
+            SceneManager.LoadScene(2);
         }
 
         timer -= Time.deltaTime;
