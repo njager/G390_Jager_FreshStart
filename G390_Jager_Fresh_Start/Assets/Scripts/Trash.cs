@@ -13,11 +13,14 @@ public class Trash : MonoBehaviour
 
     //private variables
     private float timer =20;
+    private int buildIndex;
 
     //start is called at the beginning of the game
     private void Start()
     {
         SetCountText();
+        buildIndex = SceneManager.sceneCount;
+        print(buildIndex.ToString());
     }
 
     // Update is called once per frame
@@ -25,7 +28,10 @@ public class Trash : MonoBehaviour
     {
          if(itemsLeft <= 0)
         {
-            SceneManager.LoadScene(2);
+            if(buildIndex == 1)
+            {
+                SceneManager.LoadScene(2);
+            }
         }
 
         timer -= Time.deltaTime;
