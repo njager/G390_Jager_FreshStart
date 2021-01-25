@@ -13,14 +13,15 @@ public class Trash : MonoBehaviour
 
     //private variables
     private float timer =20;
-    private int buildIndex;
+    private string sceneName;
 
     //start is called at the beginning of the game
     private void Start()
     {
         SetCountText();
-        buildIndex = SceneManager.sceneCount;
-        print(buildIndex.ToString());
+        Scene scene = SceneManager.GetActiveScene();
+        print(scene.name);
+        sceneName = scene.name;
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class Trash : MonoBehaviour
     {
          if(itemsLeft <= 0)
         {
-            if(buildIndex == 1)
+            if(sceneName == "level1")
             {
                 SceneManager.LoadScene(2);
             }
