@@ -12,7 +12,7 @@ public class Trash : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     //private variables
-    private float timer =20;
+    private float timer = 10;
     private string sceneName;
 
     //start is called at the beginning of the game
@@ -32,6 +32,10 @@ public class Trash : MonoBehaviour
             if(sceneName == "level1")
             {
                 SceneManager.LoadScene(2);
+            }
+            else if(sceneName == "level2")
+            {
+                SceneManager.LoadScene(3);
             }
         }
 
