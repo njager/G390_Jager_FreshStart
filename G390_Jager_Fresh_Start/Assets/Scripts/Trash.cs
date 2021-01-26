@@ -37,6 +37,15 @@ public class Trash : MonoBehaviour
             {
                 SceneManager.LoadScene(3);
             }
+            else if(sceneName == "level3")
+            {
+                SceneManager.LoadScene(4);
+            }
+        }
+
+         if(timer <= 0)
+        {
+            SceneManager.LoadScene(4);
         }
 
         timer -= Time.deltaTime;
