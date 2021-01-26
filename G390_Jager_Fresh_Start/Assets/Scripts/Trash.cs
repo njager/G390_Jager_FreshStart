@@ -14,6 +14,8 @@ public class Trash : MonoBehaviour
     //private variables
     private float timer = 10;
     private string sceneName;
+    private AudioSource audioSource;
+    private AudioClip goneSFX;
 
     //start is called at the beginning of the game
     private void Start()
@@ -22,6 +24,7 @@ public class Trash : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         print(scene.name);
         sceneName = scene.name;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -66,6 +69,7 @@ public class Trash : MonoBehaviour
             itemsLeft -= 1;
             other.gameObject.SetActive(false);
             SetCountText();
+            audioSource.Play();
         }
     }
 }
